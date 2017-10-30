@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import employees from '../constants/Employees.js';
 
-export default class EmployeesScreen extends React.Component {
+export default class DirectoryScreen extends React.Component {
   static navigationOptions = {
     title: 'Links',
   };

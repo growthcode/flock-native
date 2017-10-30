@@ -6,7 +6,7 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 // import HomeScreen from '../screens/HomeScreen';
-import EmployeesScreen from '../screens/EmployeesScreen';
+import DirectoryScreen from '../screens/DirectoryScreen';
 // import SettingsScreen from '../screens/SettingsScreen';
 
 export default TabNavigator(
@@ -15,7 +15,7 @@ export default TabNavigator(
     //   screen: HomeScreen,
     // },
     Links: {
-      screen: EmployeesScreen,
+      screen: DirectoryScreen,
     },
     // Settings: {
     //   screen: SettingsScreen,
