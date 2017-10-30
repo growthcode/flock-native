@@ -5,7 +5,7 @@ import {
   View,
   Text,
 } from 'react-native';
-import employees from '../constants/Employees.js';
+import DirectoryContainer from '../containers/Directory/DirectoryContainer';
 
 export default class DirectoryScreen extends React.Component {
   static navigationOptions = {
@@ -15,18 +15,7 @@ export default class DirectoryScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-
-        <View>
-
-            {
-              employees.map((employee) => (
-                <Text key={employee.id}>
-                  {`${employee.first_name} ${employee.last_name}`}
-                </Text>
-              ))
-            }
-
-        </View>
+        <DirectoryContainer />
       </ScrollView>
     );
   }
