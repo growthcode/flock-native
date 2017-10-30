@@ -5,21 +5,21 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 
 import Colors from '../constants/Colors';
 
-import HomeScreen from '../screens/HomeScreen';
+// import HomeScreen from '../screens/HomeScreen';
 import EmployeesScreen from '../screens/EmployeesScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+// import SettingsScreen from '../screens/SettingsScreen';
 
 export default TabNavigator(
   {
-    Home: {
-      screen: HomeScreen,
-    },
+    // Home: {
+    //   screen: HomeScreen,
+    // },
     Links: {
       screen: EmployeesScreen,
     },
-    Settings: {
-      screen: SettingsScreen,
-    },
+    // Settings: {
+    //   screen: SettingsScreen,
+    // },
   },
   {
     navigationOptions: ({ navigation }) => ({
