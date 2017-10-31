@@ -5,6 +5,12 @@ import { StackNavigator } from 'react-navigation';
 import MainTabNavigator from './MainTabNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
 
+import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
+
+import DirectoryContainer from '../containers/Directory/DirectoryContainer';
+
+
+
 const RootStackNavigator = StackNavigator(
   {
     Main: {
@@ -19,6 +25,7 @@ const RootStackNavigator = StackNavigator(
     }),
   }
 );
+          // <RootStackNavigator />
 
 export default class RootNavigator extends React.Component {
   componentDidMount() {
@@ -30,7 +37,31 @@ export default class RootNavigator extends React.Component {
   }
 
   render() {
-    return <RootStackNavigator />;
+    return (
+      <Container>
+        <Header>
+          <Left>
+            <Button transparent>
+              <Icon name='menu' />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Header</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content>
+          <DirectoryContainer />
+        </Content>
+        <Footer>
+          <FooterTab>
+            <Button full>
+              <Text>Footer</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
+      </Container>
+    );
   }
 
   _registerForPushNotifications() {

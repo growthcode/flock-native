@@ -52,14 +52,14 @@ console.log(styles)
 export default class DirectoryContainer extends Component {
   render () {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>
-          Logo goes here
-        </Text>
         <Directory tempTestingStyle={styles.title}/>
-      </View>
     )
   }
 }
         // <Text style={padding: 5, borderWidth: 0.5, borderColor: 'black', margin: 5}>
+      // <View style={styles.container}>
+        // <Text style={styles.title}>
+          // Logo goes here
+        // </Text>
 
+      // </View>

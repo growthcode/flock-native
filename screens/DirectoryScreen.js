@@ -11,12 +11,11 @@ export default class DirectoryScreen extends React.Component {
   static navigationOptions = {
     title: 'Directory',
   };
-
+  // <ScrollView style={styles.container}>
+  // </ScrollView>
   render() {
     return (
-      <ScrollView style={styles.container}>
         <DirectoryContainer />
-      </ScrollView>
     );
   }
 }
