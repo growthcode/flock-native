@@ -9,7 +9,7 @@ import DirectoryContainer from '../containers/Directory/DirectoryContainer';
 
 export default class DirectoryScreen extends React.Component {
   static navigationOptions = {
-    title: 'Links',
+    title: 'Directory',
   };
 
   render() {
