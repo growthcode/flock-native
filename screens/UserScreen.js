@@ -8,6 +8,7 @@ import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Rig
 import { TabNavigator } from 'react-navigation';
 import ActivityScreen from '../screens/ActivityScreen';
 import DirectoryScreen from '../screens/DirectoryScreen';
+import Drawer from '../navigation/Drawer'
 
 export class ProfileScreen extends React.Component {
   static navigationOptions = {
@@ -18,7 +19,7 @@ export class ProfileScreen extends React.Component {
     const { navigate } = this.props.navigation
 
     return (
-        <Container>
+        <View>
           <View>
             <Text>Hello Profile Screen</Text>
           </View>
@@ -43,15 +44,22 @@ export class ProfileScreen extends React.Component {
               <Text>User</Text>
             </Button>
           </View>
-        </Container>
+          <View>
+            <Button
+                onPress={() => navigate('DrawerToggle')}
+            >
+              <Text>Drawer</Text>
+            </Button>
+          </View>
+      </View>
     );
   }
 }
 
 const UserTabs = TabNavigator({
   Profile: { screen: ProfileScreen },
-  Tasks: { screen: DirectoryScreen },
-  Benefits: { screen: ActivityScreen },
+  Directory: { screen: DirectoryScreen },
+  User: { screen: ActivityScreen },
   // Tasks: { screen: TasksScreen },
   // Benefits: { screen: BenefitsScreen },
 }, {
@@ -62,8 +70,6 @@ const UserTabs = TabNavigator({
   },
 });
 
-
-
 export default class UserScreen extends React.Component {
   static navigationOptions = {
     title: 'User',
@@ -73,7 +79,17 @@ export default class UserScreen extends React.Component {
     const { navigate } = this.props.navigation
 
     return (
-      <UserTabs />
+        <Container>
+
+          <View>
+            <Button
+              onPress={() => navigate('DrawerToggle')}
+            >
+              <Text>Drawer</Text>
+            </Button>
+          </View>
+          <UserTabs />
+        </Container>
     );
   }
 }

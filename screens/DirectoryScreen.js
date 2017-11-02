@@ -42,6 +42,13 @@ export default class DirectoryScreen extends React.Component {
             </Button>
           </View>
           <View>
+            <Button
+                onPress={() => navigate('DrawerToggle')}
+            >
+              <Text>Drawer</Text>
+            </Button>
+          </View>
+          <View>
             <DirectoryContainer />
           </View>
         </Container>

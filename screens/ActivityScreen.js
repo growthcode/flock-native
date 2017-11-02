@@ -40,6 +40,13 @@ export default class ActivityScreen extends React.Component {
               <Text>User</Text>
             </Button>
           </View>
+          <View>
+            <Button
+                onPress={() => navigate('DrawerToggle')}
+            >
+              <Text>Drawer</Text>
+            </Button>
+          </View>
         </Container>
     );
   }
