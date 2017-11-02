@@ -4,17 +4,16 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import DirectoryContainer from '../containers/Directory/DirectoryContainer';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
 
-export default class DirectoryScreen extends React.Component {
+export default class ProfileScreen extends React.Component {
   static navigationOptions = {
-    title: 'Directory',
+    title: 'Profile',
   };
-  // <ScrollView style={styles.container}>
-  // </ScrollView>
+
   render() {
     const { navigate } = this.props.navigation
+
     return (
         <Container>
           <View>
@@ -41,13 +40,11 @@ export default class DirectoryScreen extends React.Component {
               <Text>Profile</Text>
             </Button>
           </View>
-          <View>
-            <DirectoryContainer />
-          </View>
         </Container>
     );
   }
 }
+            // onPress={() => navigate('Directory')}
 
 const styles = StyleSheet.create({
   container: {
@@ -56,3 +53,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+

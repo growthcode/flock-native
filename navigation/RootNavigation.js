@@ -7,27 +7,32 @@ import registerForPushNotificationsAsync from '../api/registerForPushNotificatio
 
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
 
-import DirectoryContainer from '../containers/Directory/DirectoryContainer';
+import ActivityScreen from '../screens/ActivityScreen';
+import DirectoryScreen from '../screens/DirectoryScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 
-
-const RootStackNavigator = StackNavigator(
-  {
-    Main: {
-      screen: MainTabNavigator,
-    },
-  },
-  {
-    navigationOptions: () => ({
-      headerTitleStyle: {
-        fontWeight: 'normal',
-      },
-    }),
-  }
-);
-          // <RootStackNavigator />
+const RootStackNavigator = StackNavigator({
+  // Main: {
+  //   screen: MainTabNavigator,
+  // },
+  Activity: { screen: ActivityScreen },
+  Directory: { screen: DirectoryScreen },
+  Profile: { screen: ProfileScreen },
+  // Profile: {
+  //   screen: ProfileScreen,
+  // },
+  // {
+  //   navigationOptions: () => ({
+  //     headerTitleStyle: {
+  //       fontWeight: 'normal',
+  //     },
+  //   }),
+  // }
+});
 
 export default class RootNavigator extends React.Component {
+
   componentDidMount() {
     this._notificationSubscription = this._registerForPushNotifications();
   }
@@ -38,31 +43,10 @@ export default class RootNavigator extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <DirectoryContainer />
-        </Content>
-        <Footer>
-          <FooterTab>
-            <Button full>
-              <Text>Footer</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
-      </Container>
-    );
+      <RootStackNavigator />
+    )
   }
+
 
   _registerForPushNotifications() {
     // Send our push token over to our backend so we can receive notifications
@@ -83,3 +67,38 @@ export default class RootNavigator extends React.Component {
     );
   };
 }
+
+
+
+
+
+
+
+
+  // render() {
+  //   return (
+  //     <Container>
+  //       <Header>
+  //         <Left>
+  //           <Button transparent>
+  //             <Icon name='menu' />
+  //           </Button>
+  //         </Left>
+  //         <Body>
+  //           <Title>Header</Title>
+  //         </Body>
+  //         <Right />
+  //       </Header>
+  //       <Content>
+  //         <DirectoryContainer />
+  //       </Content>
+  //       <Footer>
+  //         <FooterTab>
+  //           <Button full>
+  //             <Text>Footer</Text>
+  //           </Button>
+  //         </FooterTab>
+  //       </Footer>
+  //     </Container>
+  //   );
+  // }
