@@ -35,9 +35,9 @@ export default class ActivityScreen extends React.Component {
           </View>
           <View>
             <Button
-                onPress={() => navigate('Profile')}
+                onPress={() => navigate('User')}
             >
-              <Text>Profile</Text>
+              <Text>User</Text>
             </Button>
           </View>
         </Container>

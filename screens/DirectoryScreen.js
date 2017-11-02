@@ -18,7 +18,7 @@ export default class DirectoryScreen extends React.Component {
     return (
         <Container>
           <View>
-            <Text>Hello Activity Screen</Text>
+            <Text>Hello Directory Screen</Text>
           </View>
           <View>
             <Button
@@ -36,9 +36,9 @@ export default class DirectoryScreen extends React.Component {
           </View>
           <View>
             <Button
-                onPress={() => navigate('Profile')}
+                onPress={() => navigate('User')}
             >
-              <Text>Profile</Text>
+              <Text>User</Text>
             </Button>
           </View>
           <View>

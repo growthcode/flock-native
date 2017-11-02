@@ -9,7 +9,7 @@ import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Rig
 
 import ActivityScreen from '../screens/ActivityScreen';
 import DirectoryScreen from '../screens/DirectoryScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+import UserScreen from '../screens/UserScreen';
 
 
 const RootStackNavigator = StackNavigator({
@@ -18,9 +18,9 @@ const RootStackNavigator = StackNavigator({
   // },
   Activity: { screen: ActivityScreen },
   Directory: { screen: DirectoryScreen },
-  Profile: { screen: ProfileScreen },
-  // Profile: {
-  //   screen: ProfileScreen,
+  User: { screen: UserScreen },
+  // User: {
+  //   screen: UserScreen,
   // },
   // {
   //   navigationOptions: () => ({
