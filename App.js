@@ -4,6 +4,8 @@ import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
 import RootNavigation from './navigation/RootNavigation';
 
+import { Root } from "native-base";
+
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
@@ -12,20 +14,24 @@ export default class App extends React.Component {
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
-        <AppLoading
-          startAsync={this._loadResourcesAsync}
-          onError={this._handleLoadingError}
-          onFinish={this._handleFinishLoading}
-        />
+        <Root>
+          <AppLoading
+            startAsync={this._loadResourcesAsync}
+            onError={this._handleLoadingError}
+            onFinish={this._handleFinishLoading}
+          />
+        </Root>
       );
     } else {
       return (
-        <View style={styles.container}>
-          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          {Platform.OS === 'android' &&
-            <View style={styles.statusBarUnderlay} />}
-          <RootNavigation />
-        </View>
+        <Root>
+          <View style={styles.container}>
+            {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+            {Platform.OS === 'android' &&
+              <View style={styles.statusBarUnderlay} />}
+            <RootNavigation />
+          </View>
+        </Root>
       );
     }
   }

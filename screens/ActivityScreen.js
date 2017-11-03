@@ -5,6 +5,7 @@ import {
   View,
 } from 'react-native';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
+import TempCommonPage from '../app/components/TempCommonPage';
 
 export default class ActivityScreen extends React.Component {
   static navigationOptions = {
@@ -12,53 +13,8 @@ export default class ActivityScreen extends React.Component {
   };
 
   render() {
-    const { navigate } = this.props.navigation
-
     return (
-        <Container>
-          <View>
-            <Text>Hello Activity Screen</Text>
-          </View>
-          <View>
-            <Button
-                onPress={() => navigate('Activity')}
-            >
-              <Text>Activity</Text>
-            </Button>
-          </View>
-          <View>
-            <Button
-                onPress={() => navigate('Directory')}
-            >
-              <Text>Directory</Text>
-            </Button>
-          </View>
-          <View>
-            <Button
-                onPress={() => navigate('User')}
-            >
-              <Text>User</Text>
-            </Button>
-          </View>
-          <View>
-            <Button
-                onPress={() => navigate('DrawerToggle')}
-            >
-              <Text>Drawer</Text>
-            </Button>
-          </View>
-        </Container>
+      <TempCommonPage navigation={ this.props.navigation } />
     );
   }
 }
-            // onPress={() => navigate('Directory')}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
-  },
-});
-
-

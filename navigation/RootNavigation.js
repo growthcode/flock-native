@@ -7,31 +7,11 @@ import registerForPushNotificationsAsync from '../api/registerForPushNotificatio
 
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, View, Col, Row, Grid } from 'native-base';
 
-import Drawer from './Drawer';
-import ActivityScreen from '../screens/ActivityScreen';
-import DirectoryScreen from '../screens/DirectoryScreen';
-import UserScreen from '../screens/UserScreen';
+// import ActivityScreen from '../screens/ActivityScreen';
+// import DirectoryScreen from '../screens/DirectoryScreen';
+// import UserScreen from '../screens/UserScreen';
 
-
-const RootStackNavigator = StackNavigator({
-  // Main: {
-  //   screen: MainTabNavigator,
-  // },
-  Drawer: { screen: Drawer },
-  Activity: { screen: ActivityScreen },
-  Directory: { screen: DirectoryScreen },
-  User: { screen: UserScreen },
-  // User: {
-  //   screen: UserScreen,
-  // },
-  // {
-  //   navigationOptions: () => ({
-  //     headerTitleStyle: {
-  //       fontWeight: 'normal',
-  //     },
-  //   }),
-  // }
-});
+import RootStackNavigator from '../app/RootStackNavigator';
 
 export default class RootNavigator extends React.Component {
 
@@ -45,15 +25,11 @@ export default class RootNavigator extends React.Component {
 
   render() {
     return (
+      <Container>
         <RootStackNavigator />
+      </Container>
     )
   }
-
-        // <Button
-        //   onPress={() => this.props.navigation.navigate('DrawerToggle')}
-        // >
-        //   <Text>Drawer</Text>
-        // </Button>
 
   _registerForPushNotifications() {
     // Send our push token over to our backend so we can receive notifications
