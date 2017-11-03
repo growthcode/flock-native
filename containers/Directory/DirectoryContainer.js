@@ -27,6 +27,15 @@ const styles = StyleSheet.create({
   },
 });
 
+export default class DirectoryContainer extends Component {
+  render () {
+    return (
+        <Directory tempTestingStyle={styles.title}/>
+    )
+  }
+}
+
+// console.log(styles)
 
 // renderItem = ({item}) => {
 //   return (
@@ -46,16 +55,6 @@ const styles = StyleSheet.create({
 //     />
 //   );
 // }
-
-console.log(styles)
-
-export default class DirectoryContainer extends Component {
-  render () {
-    return (
-        <Directory tempTestingStyle={styles.title}/>
-    )
-  }
-}
         // <Text style={padding: 5, borderWidth: 0.5, borderColor: 'black', margin: 5}>
       // <View style={styles.container}>
         // <Text style={styles.title}>

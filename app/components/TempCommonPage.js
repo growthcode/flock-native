@@ -5,13 +5,16 @@ import { StyleSheet } from 'react-native';
 import {
   Body,
   Button,
+  Col,
   Container,
   Content,
   Footer,
   FooterTab,
+  Grid,
   Header,
   Icon,
   Left,
+  Row,
   Right,
   Text,
   Title,
@@ -21,30 +24,32 @@ import {
 export default function TempCommonPage (props) {
   const { navigate } = props.navigation
   return (
-    <Content>
+    <Grid>
       <View>
         <Text>Hello....</Text>
       </View>
-      <View>
-        <Button onPress={() => navigate('Activity')} >
-          <Text>Activity</Text>
-        </Button>
-      </View>
-      <View>
-        <Button onPress={() => navigate('Directory')} >
-          <Text>Directory</Text>
-        </Button>
-      </View>
-      <View>
-        <Button onPress={() => navigate('User')} >
-          <Text>User</Text>
-        </Button>
-      </View>
-      <View>
-        <Button onPress={() => navigate('DrawerToggle')} >
-          <Text>Drawer</Text>
-        </Button>
-      </View>
-    </Content>
+      <Row>
+        <Col>
+          <Button full onPress={() => navigate('Activity')} >
+            <Text>Activity</Text>
+          </Button>
+        </Col>
+        <Col>
+          <Button full danger onPress={() => navigate('User')} >
+            <Text>User</Text>
+          </Button>
+        </Col>
+        <Col>
+          <Button full warning onPress={() => navigate('Directory')} >
+            <Text>Users</Text>
+          </Button>
+        </Col>
+        <Col>
+          <Button full dark onPress={() => navigate('DrawerToggle')} >
+            <Text>Drawer</Text>
+          </Button>
+        </Col>
+      </Row>
+    </Grid>
   )
 }

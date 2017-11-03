@@ -1,10 +1,10 @@
 import React from 'react';
-import { Platform, StatusBar, StyleSheet, View, Text } from 'react-native';
+import { Platform, StatusBar, StyleSheet, } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
 import RootNavigation from './navigation/RootNavigation';
 
-import { Root } from "native-base";
+import { Root, View, Text, } from "native-base";
 
 export default class App extends React.Component {
   state = {

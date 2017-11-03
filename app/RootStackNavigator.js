@@ -5,9 +5,9 @@ import { Root } from "native-base";
 import { StackNavigator } from "react-navigation";
 
 import Drawer from './Drawer';
-import ActivityScreen from '../screens/ActivityScreen';
-import DirectoryScreen from '../screens/DirectoryScreen';
-import UserScreen from '../screens/UserScreen';
+import ActivityScreen from './screens/ActivityScreen';
+import DirectoryScreen from './screens/DirectoryScreen';
+import UserScreen from './screens/UserScreen';
 
 const RootStackNavigator = StackNavigator({
   Drawer: { screen: Drawer },

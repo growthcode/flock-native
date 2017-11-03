@@ -7,7 +7,7 @@ import registerForPushNotificationsAsync from '../api/registerForPushNotificatio
 
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, View, Col, Row, Grid } from 'native-base';
 
-// import ActivityScreen from '../screens/ActivityScreen';
+// import ActivityScreen from './screens/ActivityScreen';
 // import DirectoryScreen from '../screens/DirectoryScreen';
 // import UserScreen from '../screens/UserScreen';
 
