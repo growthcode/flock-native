@@ -1,4 +1,5 @@
 import React from 'react';
+import Expo from "expo";
 import { Platform, StatusBar, StyleSheet, } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
@@ -14,35 +15,36 @@ export default class App extends React.Component {
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
-        <Root>
-          <AppLoading
-            startAsync={this._loadResourcesAsync}
-            onError={this._handleLoadingError}
-            onFinish={this._handleFinishLoading}
-          />
-        </Root>
+        <AppLoading
+          startAsync={this._loadResourcesAsync}
+          onError={this._handleLoadingError}
+          onFinish={this._handleFinishLoading}
+        />
       );
     } else {
       return (
-        <Root>
-          <View style={styles.container}>
-            {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-            {Platform.OS === 'android' &&
-              <View style={styles.statusBarUnderlay} />}
-            <RootNavigation />
-          </View>
-        </Root>
+        <View style={styles.container}>
+          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+          {Platform.OS === 'android' &&
+            <View style={styles.statusBarUnderlay} />}
+          <RootNavigation />
+        </View>
       );
     }
   }
 
   _loadResourcesAsync = async () => {
+    // await Expo.Font.loadAsync({
+    //   Roboto: require("native-base/Fonts/Roboto.ttf"),
+    //   Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+    //   Ionicons: require("@expo/vector-icons/fonts/Ionicons.ttf")
+    // });
     return Promise.all([
       Asset.loadAsync([
         require('./assets/images/robot-dev.png'),
         require('./assets/images/robot-prod.png'),
       ]),
-      Font.loadAsync([
+      Expo.Font.loadAsync([
         Ionicons.font, // This is the font that we are using for our tab bar
         FontAwesome.font,
 
@@ -50,8 +52,8 @@ export default class App extends React.Component {
         // to remove this if you are not using it in your app
         {
           'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
-          'Roboto': require('native-base/Fonts/Roboto.ttf'),
-          'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
+          Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+          Roboto: require('native-base/Fonts/Roboto.ttf'),
         },
       ]),
     ]);

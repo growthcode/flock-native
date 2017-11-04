@@ -1,16 +1,6 @@
 import { Notifications } from 'expo';
 import React from 'react';
-import { StackNavigator } from 'react-navigation';
-
-import MainTabNavigator from './MainTabNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
-
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, View, Col, Row, Grid } from 'native-base';
-
-// import ActivityScreen from './screens/ActivityScreen';
-// import DirectoryScreen from '../screens/DirectoryScreen';
-// import UserScreen from '../screens/UserScreen';
-
 import RootStackNavigator from '../app/RootStackNavigator';
 
 export default class RootNavigator extends React.Component {
@@ -25,9 +15,7 @@ export default class RootNavigator extends React.Component {
 
   render() {
     return (
-      <Container>
-        <RootStackNavigator />
-      </Container>
+      <RootStackNavigator />
     )
   }
 
@@ -50,38 +38,3 @@ export default class RootNavigator extends React.Component {
     );
   };
 }
-
-
-
-
-
-
-
-
-  // render() {
-  //   return (
-  //     <Container>
-  //       <Header>
-  //         <Left>
-  //           <Button transparent>
-  //             <Icon name='menu' />
-  //           </Button>
-  //         </Left>
-  //         <Body>
-  //           <Title>Header</Title>
-  //         </Body>
-  //         <Right />
-  //       </Header>
-  //       <Content>
-  //         <DirectoryContainer />
-  //       </Content>
-  //       <Footer>
-  //         <FooterTab>
-  //           <Button full>
-  //             <Text>Footer</Text>
-  //           </Button>
-  //         </FooterTab>
-  //       </Footer>
-  //     </Container>
-  //   );
-  // }
