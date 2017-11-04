@@ -1,24 +1,52 @@
 import React, { PropTypes } from 'react'
 import employees from '../../constants/Employees.js';
-import { Content, View, Text, ListItem } from 'native-base';
-// Directory.propTypes = {
+import { List, ListItem } from 'react-native-elements'
 
-// }
+const list = [
+  {
+    name: 'Amy Farha',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+    subtitle: 'Vice President'
+  },
+  {
+    name: 'Chris Jackson',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    subtitle: 'Vice Chairman'
+  },
+]
+
 console.log(employees[0])
 const employee = employees[0]
 
 export default function Directory (props) {
   return (
-    <Content>
-      <ListItem itemDivider>
-        <Text>A</Text>
-      </ListItem>
-      <ListItem>
-        <Text>Aaron Bennet</Text>
-      </ListItem>
-    </Content>
+    <List containerStyle={{marginBottom: 20}}>
+      {
+        list.map((l, i) => (
+          <ListItem
+            roundAvatar
+            avatar={{uri:l.avatar_url}}
+            key={i}
+            title={l.name}
+          />
+        ))
+      }
+    </List>
   )
 }
+
+
+
+
+// import { Content, View, Text, ListItem } from 'native-base';
+//     <Content>
+//       <ListItem itemDivider>
+//         <Text>A</Text>
+//       </ListItem>
+//       <ListItem>
+//         <Text>Aaron Bennet</Text>
+//       </ListItem>
+//     </Content>
 
     // <View>
 
