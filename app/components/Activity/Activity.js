@@ -18,10 +18,9 @@ import {
   View,
 } from 'native-base';
 
-import TempCommonPage from '../TempCommonPage';
-
 export default function Activity (props) {
+
   return (
-    <TempCommonPage navigation={ props.navigation } />
+    <Text>Text Page</Text>
   )
 }

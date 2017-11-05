@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
-import { Ionicons, FontAwesome } from '@expo/vector-icons';
+import { Ionicons, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import RootNavigation from './navigation/RootNavigation';
 
 import { Root, View, Text, } from "native-base";
@@ -27,11 +27,6 @@ export default class App extends React.Component {
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
           {Platform.OS === 'android' &&
             <View style={styles.statusBarUnderlay} />}
-            <Header
-              leftComponent={{ icon: 'menu', color: '#fff' }}
-              centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-              rightComponent={{ icon: 'home', color: '#fff' }}
-            />
           <RootNavigation />
         </View>
       );
@@ -47,6 +42,7 @@ export default class App extends React.Component {
       Font.loadAsync([
         Ionicons.font, // This is the font that we are using for our tab bar
         FontAwesome.font,
+        MaterialIcons.font,
 
         // We include SpaceMono because we use it in HomeScreen.js. Feel free
         // to remove this if you are not using it in your app

@@ -20,10 +20,14 @@ import Activity from '../components/Activity/Activity';
 import Directory from '../components/Directory/Directory';
 import TempUniqNameDirectory from '../components/Directory/Directory';
 import FooterBar from '../components/Footer/FooterBar.js';
+import LeftHeaderComponent from '../components/Header/LeftHeaderComponent'
 
 export default class UserScreen extends React.Component {
-  static navigationOptions = {
-    header: null
+  static navigationOptions = ({ navigation }) => {
+    return {
+      headerLeft: ( <LeftHeaderComponent navigation={navigation} /> ),
+      title: 'Profile',
+    }
   };
 
   render() {
