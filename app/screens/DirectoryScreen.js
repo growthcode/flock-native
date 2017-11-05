@@ -3,8 +3,9 @@ import React from 'react';
 import { Container, Header, Title, Content, FooterTab, Button, Left, Right, Body, Icon, Text, View } from 'native-base';
 
 import TempCommonPage from '../components/TempCommonPage';
-import FooterBar from '../components/Footer/FooterBar.js';
-import DirectoryContainer from '../../containers/Directory/DirectoryContainer';
+import FooterBar from '../components/Footer/FooterBar';
+import Directory from '../components/Directory/Directory';
+import Activity from '../components/Activity/Activity';
 
 export default class DirectoryScreen extends React.Component {
   static navigationOptions = {
@@ -15,11 +16,25 @@ export default class DirectoryScreen extends React.Component {
     return (
       <Container>
         <Content>
-          <TempCommonPage navigation={ this.props.navigation } />
-          <DirectoryContainer />
+          <Directory />
+          <Activity navigation={ this.props.navigation } />
         </Content>
         <FooterBar navigation={ this.props.navigation } />
       </Container>
     );
   }
 }
+
+
+
+// <View>
+//   <Directory />
+//   <Container>
+//   <Content>
+//     <TempCommonPage navigation={ this.props.navigation } />
+//     <FooterBar navigation={ this.props.navigation } />
+//   </Content>
+//   </Container>
+// </View>
+
+

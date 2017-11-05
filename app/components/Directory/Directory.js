@@ -1,27 +1,43 @@
-import React, { PropTypes } from 'react'
-
-import { StyleSheet } from 'react-native';
+import employees from '../../../constants/Employees.js';
+import React, { Component } from 'react';
+import { ScrollView, View, StyleSheet, Platform } from 'react-native';
 
 import {
-  Body,
   Button,
-  Container,
-  Content,
-  Footer,
-  FooterTab,
-  Header,
-  Icon,
-  Left,
-  Right,
   Text,
-  Title,
-  View,
-} from 'native-base';
-
-import TempCommonPage from '../TempCommonPage';
+  FormInput,
+  FormLabel,
+  CheckBox,
+  List,
+  ListItem,
+  SearchBar,
+} from 'react-native-elements';
 
 export default function Directory (props) {
   return (
-    <TempCommonPage navigation={ props.navigation } />
+    <ScrollView>
+      <View>
+        <SearchBar
+          round
+          textInputRef="textInputRef"
+          placeholder="Search"
+        />
+      </View>
+      <View>
+        <List containerStyle={{ marginBottom: 15, marginTop: 15 }}>
+          {
+            employees.map((employee, i) => (
+              <ListItem
+                key={i}
+                roundAvatar
+                title={`${employee.first_name} ${employee.last_name}`}
+                subtitle={employee.title}
+                avatar={{uri:employee.avatar_url}}
+              />
+            ))
+          }
+        </List>
+      </View>
+    </ScrollView>
   )
 }
