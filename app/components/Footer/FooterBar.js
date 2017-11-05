@@ -27,11 +27,11 @@ export default function FooterBar (props) {
         <Button onPress={() => navigate('Activity')} active={routeName === 'Activity'} >
           <Text>Activity</Text>
         </Button>
-        <Button onPress={() => navigate('Directory')} active={routeName === 'Directory'} >
-          <Text>Directory</Text>
-        </Button>
         <Button onPress={() => navigate('User')} active={routeName === 'User'} >
           <Text>User</Text>
+        </Button>
+        <Button onPress={() => navigate('Directory')} active={routeName === 'Directory'} >
+          <Text>Directory</Text>
         </Button>
         <Button onPress={() => navigate('DrawerToggle')} >
           <Text>Drawer</Text>

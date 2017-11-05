@@ -1,24 +1,21 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { ScrollView, View, StyleSheet, Platform, Image } from 'react-native';
+import { Container, Tabs, Tab, } from 'native-base';
 
 import {
-  Body,
+  Avatar,
   Button,
-  Card,
-  CardItem,
-  Container,
-  Content,
-  Header,
-  Icon,
-  Left,
-  Right,
-  Tab,
-  Tabs,
   Text,
-  Title,
-  View,
-} from 'native-base';
+  FormInput,
+  FormLabel,
+  CheckBox,
+  List,
+  ListItem,
+  SearchBar,
+  Header,
+} from 'react-native-elements';
 
+import Profile from '../components/Profile/Profile';
 import Activity from '../components/Activity/Activity';
 import Directory from '../components/Directory/Directory';
 import TempUniqNameDirectory from '../components/Directory/Directory';
@@ -26,28 +23,27 @@ import FooterBar from '../components/Footer/FooterBar.js';
 
 export default class UserScreen extends React.Component {
   static navigationOptions = {
-    title: 'User',
+    header: null
   };
 
   render() {
     return (
-      <Container>
+      <ScrollView>
         <Tabs>
-          <Tab heading="Profile">
-            <Text>Profile Tab</Text>
-            <Activity navigation={ this.props.navigation }/>
+          <Tab heading="Profile" style={{flex: 1, alignItems: 'stretch'}}>
+            <Profile navigation={ this.props.navigation }/>
           </Tab>
           <Tab heading="Tasks">
             <Text>Tasks Tab</Text>
-            <Directory navigation={ this.props.navigation } />
           </Tab>
           <Tab heading="Benefits">
-            <Text>Benefits Tab</Text>
             <TempUniqNameDirectory navigation={ this.props.navigation } />
+            <Text>Benefits Tab</Text>
           </Tab>
         </Tabs>
-        <FooterBar navigation={ this.props.navigation } />
-      </Container>
+      </ScrollView>
     );
   }
 }
+
+

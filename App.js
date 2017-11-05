@@ -5,6 +5,7 @@ import { Ionicons, FontAwesome } from '@expo/vector-icons';
 import RootNavigation from './navigation/RootNavigation';
 
 import { Root, View, Text, } from "native-base";
+import { Header } from 'react-native-elements';
 
 export default class App extends React.Component {
   state = {
@@ -26,6 +27,11 @@ export default class App extends React.Component {
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
           {Platform.OS === 'android' &&
             <View style={styles.statusBarUnderlay} />}
+            <Header
+              leftComponent={{ icon: 'menu', color: '#fff' }}
+              centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+              rightComponent={{ icon: 'home', color: '#fff' }}
+            />
           <RootNavigation />
         </View>
       );

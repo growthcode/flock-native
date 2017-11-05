@@ -25,9 +25,6 @@ export default function TempCommonPage (props) {
   const { navigate } = props.navigation
   return (
     <Grid>
-      <View>
-        <Text>Hello....</Text>
-      </View>
       <Row>
         <Col>
           <Button full onPress={() => navigate('Activity')} >

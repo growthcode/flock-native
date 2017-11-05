@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { ScrollView } from 'react-native';
 import { Container, Header, Title, Content, FooterTab, Button, Left, Right, Body, Icon, Text, View } from 'native-base';
 
 import TempCommonPage from '../components/TempCommonPage';
@@ -16,8 +16,10 @@ export default class DirectoryScreen extends React.Component {
     return (
       <Container>
         <Content>
+    <ScrollView>
           <Directory />
           <Activity navigation={ this.props.navigation } />
+    </ScrollView>
         </Content>
         <FooterBar navigation={ this.props.navigation } />
       </Container>

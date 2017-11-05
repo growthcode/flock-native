@@ -15,7 +15,7 @@ import {
 
 export default function Directory (props) {
   return (
-    <ScrollView>
+    <View>
       <View>
         <SearchBar
           round
@@ -38,6 +38,6 @@ export default function Directory (props) {
           }
         </List>
       </View>
-    </ScrollView>
+    </View>
   )
 }

@@ -13,8 +13,6 @@ export default class ActivityScreen extends React.Component {
   };
 
   render() {
-  console.log(this.props.navigation.state)
-
     return (
       <Container>
         <Content>
