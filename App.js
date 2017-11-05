@@ -1,5 +1,4 @@
 import React from 'react';
-import Expo from "expo";
 import { Platform, StatusBar, StyleSheet, } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
@@ -34,26 +33,21 @@ export default class App extends React.Component {
   }
 
   _loadResourcesAsync = async () => {
-    // await Expo.Font.loadAsync({
-    //   Roboto: require("native-base/Fonts/Roboto.ttf"),
-    //   Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-    //   Ionicons: require("@expo/vector-icons/fonts/Ionicons.ttf")
-    // });
     return Promise.all([
       Asset.loadAsync([
-        require('./assets/images/robot-dev.png'),
-        require('./assets/images/robot-prod.png'),
+        require('./app/assets/images/flock.png'),
+        require('./app/assets/images/flock-large.png'),
       ]),
-      Expo.Font.loadAsync([
+      Font.loadAsync([
         Ionicons.font, // This is the font that we are using for our tab bar
         FontAwesome.font,
 
         // We include SpaceMono because we use it in HomeScreen.js. Feel free
         // to remove this if you are not using it in your app
         {
-          'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
-          Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-          Roboto: require('native-base/Fonts/Roboto.ttf'),
+          Roboto: require("native-base/Fonts/Roboto.ttf"),
+          Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+          'space-mono': require('./app/assets/fonts/SpaceMono-Regular.ttf'),
         },
       ]),
     ]);

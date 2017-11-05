@@ -1,7 +1,10 @@
+import getRandomAvatarPic from './AvatarPhotoUrls';
+
 export default [
   {
     "id": "9c1e4a28-454b-4058-8e04-a0daaa7fd729",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    // "avatar_url" : 'http://lorempixel.com/400/400/people',
+    "avatar_url" : getRandomAvatarPic(),
     "employee_id": "",
     "first_name": "Emp_01",
     "last_name": "User",
@@ -96,7 +99,8 @@ export default [
   },
   {
     "id": "8014f51c-d2f7-4977-94f0-685a30aab050",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "Emp_03",
     "last_name": "User",
@@ -191,7 +195,8 @@ export default [
   },
   {
     "id": "10e047f7-dde3-427f-ac80-51e6407c86da",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "Greg",
     "last_name": "Stojcic",
@@ -286,7 +291,8 @@ export default [
   },
   {
     "id": "2ff01ccb-cc8b-4425-b4bf-e7c945c7345c",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "A61",
     "last_name": "Emp",
@@ -326,7 +332,8 @@ export default [
   },
   {
     "id": "6c635931-1dbf-4ce5-b52d-4811d3404866",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "A63",
     "last_name": "Emp",
@@ -366,7 +373,8 @@ export default [
   },
   {
     "id": "7f5dec0c-b231-49df-a9dc-6e99dd4e221d",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "Sterling",
     "last_name": "Archer",
@@ -461,7 +469,8 @@ export default [
   },
   {
     "id": "0b0a7158-e578-429a-87a4-b29cbbbf4445",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "pwtest1",
     "last_name": "pwtest1",
@@ -556,7 +565,8 @@ export default [
   },
   {
     "id": "75ce3a46-ebdb-44a2-b0e4-d782498e4cba",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "Emp_02",
     "last_name": "User",
@@ -651,7 +661,8 @@ export default [
   },
   {
     "id": "bdb94ddf-f7b1-4f77-b949-94d365a0b837",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "Emp_02",
     "last_name": "User",
@@ -746,7 +757,8 @@ export default [
   },
   {
     "id": "b82f7214-48d6-4467-b643-8078813856d0",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "A163",
     "last_name": "Emp",
@@ -841,7 +853,8 @@ export default [
   },
   {
     "id": "0a201e4a-e612-4792-802a-a294090bb841",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "A164",
     "last_name": "Emp",
@@ -936,7 +949,8 @@ export default [
   },
   {
     "id": "593c6f1f-dc91-4939-bc58-347f0dde2e76",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "1009",
     "first_name": "Robert",
     "last_name": "asdfasdf",
@@ -1031,7 +1045,8 @@ export default [
   },
   {
     "id": "ea54f8d6-c1d6-4ba9-834c-52c76cce4d16",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "Hetasdfe",
     "last_name": "Basdfrg",
@@ -1071,7 +1086,8 @@ export default [
   },
   {
     "id": "a7c34b9c-7147-4674-8771-9e8fa56bc2ba",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "pwtest3",
     "last_name": "pwtest3",
@@ -1166,7 +1182,8 @@ export default [
   },
   {
     "id": "f0136a87-57b8-4a56-83cf-fe776d5f69bc",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "Aonenottwo",
     "last_name": "Emp",
@@ -1206,7 +1223,8 @@ export default [
   },
   {
     "id": "f207091f-6f49-4c3f-86d5-106462cc65bd",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
     "employee_id": "",
     "first_name": "A163",
     "last_name": "Emp",
@@ -1301,7 +1319,9 @@ export default [
   },
   {
     "id": "9e41cfa2-9929-4600-83c6-4cac953dc908",
-    "avatar_url" : 'http://lorempixel.com/640/480/people/',
+    "avatar_url" : getRandomAvatarPic(),
+    // "avatar_url" : 'http://lorempixel.com/50/50/people',
+    // "avatar_url" : "https://loremflickr.com/400/400/profile",
     "employee_id": "",
     "first_name": "pwtest4",
     "last_name": "pwtest4",
