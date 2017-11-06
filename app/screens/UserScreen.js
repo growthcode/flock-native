@@ -35,13 +35,13 @@ export default class UserScreen extends React.Component {
       <ScrollView>
         <Tabs>
           <Tab heading="Profile" style={{flex: 1, alignItems: 'stretch'}}>
-            <Profile navigation={ this.props.navigation }/>
+            <Profile {...this.props} />
           </Tab>
           <Tab heading="Tasks">
             <Text>Tasks Tab</Text>
           </Tab>
           <Tab heading="Benefits">
-            <TempUniqNameDirectory navigation={ this.props.navigation } />
+            <TempUniqNameDirectory {...this.props} />
             <Text>Benefits Tab</Text>
           </Tab>
         </Tabs>
