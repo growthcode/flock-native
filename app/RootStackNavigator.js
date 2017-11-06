@@ -19,3 +19,7 @@ const RootStackNavigator = StackNavigator({
 });
 
 export default RootStackNavigator;
+
+
+// initialRouteName: 'Home'
+

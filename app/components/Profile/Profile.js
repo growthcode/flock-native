@@ -4,25 +4,34 @@ import { Container, Tabs, Tab, Grid, Row, Col } from 'native-base';
 
 import { Text } from 'react-native-elements';
 
-// temp employee data, until I extract out profile logic to current_users profile logic
-import employees from '../../../constants/Employees.js';
-const temp_employee = employees[0]
+// setParams({ mode: isInfo ? 'none' : 'info' })
 
 export default class UserScreen extends React.Component {
-  static navigationOptions = {
-    header: null
+  static navigationOptions = ({ navigation }) => {
+    const { state, setParams } = navigation;
+    const { employee } = state.params;
+    return {
+      title: `${employee.first_name} ${employee.last_name}`,
+      // headerRight: (
+        // <Button
+          // title={'stuff and things'}
+          // onPress={() => setParams({ mode: isInfo ? 'none' : 'info' })}
+        // />
+      ),
+    };
   };
 
 
+
   render() {
-    const { params } = this.props.navigation.state;
-    const params_1 = params || {}
-    console.log('props', this.props)
-    console.log('user screen params_1', this.props.navigation.state)
+    const employee = {}
+    if (this.props.employee !== undefined) {
+      const employee = this.props.employee
+    } else {
+      const { params } = this.props.navigation.state;
+      const employee = params.employee
+    }
 
-    const employee = params_1.employee || temp_employee
-
-              // {jsonParams}
     return (
       <Grid style={{flex: 1, margin: 20, alignItems: 'stretch'}}>
         <Row>
@@ -63,5 +72,3 @@ export default class UserScreen extends React.Component {
     );
   }
 }
-
-

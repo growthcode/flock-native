@@ -22,6 +22,9 @@ import TempUniqNameDirectory from '../components/Directory/Directory';
 import FooterBar from '../components/Footer/FooterBar.js';
 import LeftHeaderComponent from '../components/Header/LeftHeaderComponent'
 
+// temp employee data, until I extract out profile logic to current_users profile logic
+import employees from '../../constants/Employees.js';
+
 export default class UserScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
@@ -31,11 +34,12 @@ export default class UserScreen extends React.Component {
   };
 
   render() {
+  console.log(employees)
     return (
       <ScrollView>
         <Tabs>
           <Tab heading="Profile" style={{flex: 1, alignItems: 'stretch'}}>
-            <Profile {...this.props} />
+            <Profile {...this.props} employee={employees[0]} />
           </Tab>
           <Tab heading="Tasks">
             <Text>Tasks Tab</Text>
@@ -50,4 +54,8 @@ export default class UserScreen extends React.Component {
   }
 }
 
-
+// assigns the nested router components into the UserScreen navigation tree
+// https://reactnavigation.org/docs/intro/nesting
+//
+// TempUniqNameDirectory.router = Profile.router
+// UserScreen.router = TempUniqNameDirectory.router
