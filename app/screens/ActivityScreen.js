@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import Activity from '../components/Activity/Activity';
-import LeftHeaderComponent from '../components/Header/LeftHeaderComponent'
+import Activity from '~/components/Activity/Activity';
+import LeftHeaderComponent from '~/components/Header/LeftHeaderComponent'
 
 import {
   Button,

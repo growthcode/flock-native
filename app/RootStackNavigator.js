@@ -1,10 +1,10 @@
 import React from "react";
 import { StackNavigator } from "react-navigation";
 import Drawer from './Drawer';
-import ActivityScreen from './screens/ActivityScreen';
-import DirectoryScreen from './screens/DirectoryScreen';
-import UserScreen from './screens/UserScreen';
-import LeftHeaderComponent from './components/Header/LeftHeaderComponent'
+import ActivityScreen from '~/screens/ActivityScreen';
+import DirectoryScreen from '~/screens/DirectoryScreen';
+import UserScreen from '~/screens/UserScreen';
+import LeftHeaderComponent from '~/components/Header/LeftHeaderComponent'
 
 const RootStackNavigator = StackNavigator({
   Drawer: {

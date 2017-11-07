@@ -15,15 +15,15 @@ import {
   Header,
 } from 'react-native-elements';
 
-import Profile from '../components/Profile/Profile';
-import Activity from '../components/Activity/Activity';
-import Directory from '../components/Directory/Directory';
-import TempUniqNameDirectory from '../components/Directory/Directory';
-import FooterBar from '../components/Footer/FooterBar.js';
-import LeftHeaderComponent from '../components/Header/LeftHeaderComponent'
+import Profile from '~/components/Profile/Profile';
+import Activity from '~/components/Activity/Activity';
+import Directory from '~/components/Directory/Directory';
+import TempUniqNameDirectory from '~/components/Directory/Directory';
+import FooterBar from '~/components/Footer/FooterBar.js';
+import LeftHeaderComponent from '~/components/Header/LeftHeaderComponent'
 
 // temp employee data, until I extract out profile logic to current_users profile logic
-import employees from '../../constants/Employees.js';
+import employees from '~/../constants/Employees.js';
 
 export default class UserScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {

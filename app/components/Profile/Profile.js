@@ -17,7 +17,7 @@ export default class UserScreen extends React.Component {
           // title={'stuff and things'}
           // onPress={() => setParams({ mode: isInfo ? 'none' : 'info' })}
         // />
-      ),
+      // ),
     };
   };
 
