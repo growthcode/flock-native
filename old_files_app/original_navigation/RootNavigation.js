@@ -1,7 +1,7 @@
 import { Notifications } from 'expo';
 import React from 'react';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
-import RootStackNavigator from '../app/RootStackNavigator';
+import RootStackNavigator from '~/RootStackNavigator';
 
 export default class RootNavigator extends React.Component {
 
