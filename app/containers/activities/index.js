@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import { View, Button, Text } from 'react-native'
 
-export default class Activity extends Component {
+export default class Activities extends Component {
   static propTypes = {}
 
   render () {
@@ -11,7 +11,7 @@ export default class Activity extends Component {
       <View>
         <View>
           <Text>
-            Activity
+            Activities
           </Text>
         </View>
 
@@ -30,11 +30,17 @@ export default class Activity extends Component {
 
         <View>
           <Button
-            onPress={() => navigate('Activity')}
-            active={routeName === 'Activity'}
-            title='Activity' />
+            onPress={() => navigate('Activities')}
+            active={routeName === 'Activities'}
+            title='Activities' />
         </View>
       </View>
     )
   }
 }
+
+// Activities.propTypes = {
+//   navigation: PropTypes.shape({
+//     state: PropTypes.func.isRequired,
+//   }).isRequired,
+// };
