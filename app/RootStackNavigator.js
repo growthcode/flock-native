@@ -1,11 +1,11 @@
-import React from "react";
-import { StackNavigator } from "react-navigation";
+import React from 'react';
+import { StackNavigator } from 'react-navigation';
 import { ScrollView, View, Text } from 'react-native';
 
-import ActivitiesContainer from '~/containers/activities'
+import Drawer from '~/containers/navigations/drawer';
 
 const RootStackNavigator = StackNavigator({
-  Activity: { screen: ActivitiesContainer },
+  Drawer: { screen: Drawer },
 });
 
 export default RootStackNavigator;
