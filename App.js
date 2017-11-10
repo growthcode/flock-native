@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform, StatusBar, StyleSheet, } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons, FontAwesome, MaterialIcons } from '@expo/vector-icons';
-import RootNavigationsContainer from '~/navigations/root';
+import Main from '~/main';
 
 import { Root, View, Text, } from "native-base";
 import { Header } from 'react-native-elements';
@@ -27,7 +27,7 @@ export default class App extends React.Component {
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
           {Platform.OS === 'android' &&
             <View style={styles.statusBarUnderlay} />}
-          <RootNavigationsContainer />
+          <Main />
         </View>
       );
     }

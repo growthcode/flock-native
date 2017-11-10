@@ -3,14 +3,14 @@ import Activities from '~/components/activities'
 
 export default class ActivitiesContainer extends Component {
   static propTypes = {}
+  state = {}
   render () {
     const { navigate } = this.props.navigation
     const { routeName } = this.props.navigation.state
     return (
       <Activities
         navigate={ navigate }
-        routeName={ routeName }
-      />
+        routeName={ routeName } />
     )
   }
 }

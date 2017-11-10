@@ -12,28 +12,28 @@ export default function Activities (props) {
     <View>
       <View>
         <Text>
-          Activities
+          { 'Activities' }
         </Text>
       </View>
 
       <View>
         <Button
-          onPress={() => props.navigate('DrawerToggle')}
+          onPress={ () => props.navigate('DrawerToggle') }
           title='DrawerToggle' />
       </View>
 
       <View>
         <Button
-          onPress={() => props.navigate('TempOther')}
+          onPress={ () => props.navigate('TempOther') }
           active={ props.routeName === 'TempOther' }
           title='TempOther' />
       </View>
 
       <View>
         <Button
-          onPress={() => props.navigate('Activities')}
+          onPress={ () => props.navigate('Activities') }
           active={ props.routeName === 'Activities' }
-          title='Activities' />
+          title={ 'Activities' } />
       </View>
     </View>
   )
