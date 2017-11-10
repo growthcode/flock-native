@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform, StatusBar, StyleSheet, } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons, FontAwesome, MaterialIcons } from '@expo/vector-icons';
-import RootNavigationsContainer from '~/containers/navigations/root';
+import RootNavigationsContainer from '~/navigations/root';
 
 import { Root, View, Text, } from "native-base";
 import { Header } from 'react-native-elements';
