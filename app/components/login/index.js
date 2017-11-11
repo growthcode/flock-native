@@ -12,7 +12,7 @@ export default function Login (props) {
         { 'Login' }
       </Text>
       <Button
-        onPress={ () => props.navigate('Activities') }
+        onPress={ () => props.navigate('Home') }
         title='Login' />
     </View>
   )

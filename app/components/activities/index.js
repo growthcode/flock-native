@@ -25,9 +25,9 @@ export default function Activities (props) {
 
       <View>
         <Button
-          onPress={ () => props.navigate('Activities') }
-          active={ props.routeName === 'Activities' }
-          title={ 'Activities' } />
+          onPress={ () => props.navigate('Home') }
+          active={ props.routeName === 'Home' }
+          title={ 'Home' } />
       </View>
     </View>
   )
