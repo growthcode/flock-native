@@ -18,12 +18,6 @@ export default function Activities (props) {
 
       <View>
         <Button
-          onPress={ () => props.navigate('DrawerToggle') }
-          title='DrawerToggle' />
-      </View>
-
-      <View>
-        <Button
           onPress={ () => props.navigate('TempOther') }
           active={ props.routeName === 'TempOther' }
           title='TempOther' />
