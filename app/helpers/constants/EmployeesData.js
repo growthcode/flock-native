@@ -1,4 +1,4 @@
-import getRandomAvatarPic from './AvatarPhotoUrls'
+import getRandomAvatarPic from '~/helpers/constants/AvatarPhotoUrls';
 
 export default [
   {
