@@ -1,21 +1,28 @@
 import React, { PropTypes, Component } from 'react'
 import { View, Text } from 'react-native'
 import { SearchBar } from 'react-native-elements';
-import Employees from '~/components/employees';
-import EmployeesData from '~/helpers/constants/EmployeesData';
+import EmployeesContainer from '~/containers/employees';
 
 export default class DirectoryScreen extends Component {
   static propTypes = {}
   state = {}
+  filterList = (data) => {
+    this.setState({
+      directoryFilter: data,
+    })
+    this.render()
+  }
   render () {
+    console.log()
     return (
       <View>
         <SearchBar
           round
-          textInputRef="textInputRef"
-          placeholder="Search"
+          onChangeText={(data) => (this.filterList(data))}
+          // onClearText={this.filterList}
+          clearIcon
         />
-          <Employees {...this.props} employees={EmployeesData} />
+        <EmployeesContainer {...this.props} directoryFilter={this.state.directoryFilter} />
       </View>
     )
   }
