@@ -30,7 +30,7 @@ export default class index extends Component {
       <Employees
         {...this.props}
         employees={ this.filteredEmployees(directoryFilter) }
-        onPress={ employee => navigation.navigate('Home', { employee: employee }) }
+        onPress={ employee => navigation.navigate('Employee', { employee: employee }) }
       />
     )
   }

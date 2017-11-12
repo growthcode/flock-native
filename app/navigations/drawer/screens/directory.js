@@ -19,10 +19,9 @@ export default class DirectoryScreen extends Component {
         <SearchBar
           round
           onChangeText={(data) => (this.filterList(data))}
-          // onClearText={this.filterList}
           clearIcon
         />
-        <EmployeesContainer {...this.props} directoryFilter={this.state.directoryFilter} />
+        <EmployeesContainer {...this.props} directoryFilter={ this.state.directoryFilter } />
       </View>
     )
   }
