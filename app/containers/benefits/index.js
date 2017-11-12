@@ -1,7 +1,8 @@
 import React, { PropTypes, Component } from 'react'
 import { View, Text } from 'react-native'
 
-import Benefits from '~/components/benefits'
+// import Benefits from '~/components/benefits'
+import Benefits from '~/components/profile'
 import EmployeesData from '~/helpers/constants/EmployeesData';
 
 export default class BenefitsContainer extends Component {
@@ -16,7 +17,7 @@ export default class BenefitsContainer extends Component {
   }
   render () {
     return (
-      <Benefits />
+      <Benefits employee={ EmployeesData[0] } />
     )
   }
 }

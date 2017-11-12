@@ -1,7 +1,8 @@
 import React, { PropTypes, Component } from 'react'
 import { View, Text } from 'react-native'
 
-import Tasks from '~/components/tasks'
+// import Tasks from '~/components/tasks'
+import Tasks from '~/components/profile'
 import EmployeesData from '~/helpers/constants/EmployeesData';
 
 export default class TasksContainer extends Component {
@@ -16,7 +17,7 @@ export default class TasksContainer extends Component {
   }
   render () {
     return (
-      <Tasks />
+      <Tasks employee={ EmployeesData[0] } />
     )
   }
 }

@@ -14,9 +14,11 @@ export default class ProfileContainer extends Component {
     //   title: `${employee.first_name} ${employee.last_name}`,
     // }
   }
+
   render () {
+
     return (
-      <Profile />
+      <Profile employee={ EmployeesData[0] } />
     )
   }
 }
