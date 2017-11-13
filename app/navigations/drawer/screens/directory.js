@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import { View, Text } from 'react-native'
-import { SearchBar } from 'react-native-elements';
-import EmployeesContainer from '~/containers/employees';
+import { SearchBar } from 'react-native-elements'
+import EmployeesContainer from '~/containers/employees'
 
 export default class DirectoryScreen extends Component {
   static propTypes = {}
@@ -13,15 +13,13 @@ export default class DirectoryScreen extends Component {
     this.render()
   }
   render () {
-    console.log()
     return (
       <View>
         <SearchBar
-          round
-          onChangeText={(data) => (this.filterList(data))}
-          clearIcon
-        />
-        <EmployeesContainer {...this.props} directoryFilter={ this.state.directoryFilter } />
+          round={ true }
+          onChangeText={ (data) => (this.filterList(data)) }
+          clearIcon={ true }/>
+        <EmployeesContainer { ...this.props } directoryFilter={ this.state.directoryFilter } />
       </View>
     )
   }

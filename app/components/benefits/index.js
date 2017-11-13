@@ -9,7 +9,7 @@ export default function Benefits (props) {
   return (
     <View>
       <Text>
-        Benefits asdf
+        {'Benefits asdf'}
       </Text>
     </View>
   )

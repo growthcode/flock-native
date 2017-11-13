@@ -1,13 +1,10 @@
 import React, { PropTypes, Component } from 'react'
-import { ScrollView, View, StyleSheet, TouchableOpacity } from 'react-native'
-import { List, ListItem } from 'react-native-elements';
 import Employees from '~/components/employees'
-import EmployeesData from '~/helpers/constants/EmployeesData';
+import EmployeesData from '~/helpers/constants/EmployeesData'
 
-
-export default class index extends Component {
+export default class EmployeesContainer extends Component {
   static propTypes = {}
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.employeesAll = EmployeesData
   }
@@ -16,9 +13,9 @@ export default class index extends Component {
     if (directoryFilter.length === 0) {
       return this.employeesAll
     } else {
-      return this.employeesAll.filter( (employee) => {
+      return this.employeesAll.filter((employee) => {
         return `
-          ${ employee.first_name.toLowerCase() } ${ employee.last_name.toLowerCase() }
+          ${employee.first_name.toLowerCase()} ${employee.last_name.toLowerCase()}
         `.includes(directoryFilter.toLowerCase())
       })
     }
@@ -28,10 +25,9 @@ export default class index extends Component {
     const { navigation, directoryFilter } = this.props
     return (
       <Employees
-        {...this.props}
+        { ...this.props }
         employees={ this.filteredEmployees(directoryFilter) }
-        onPress={ employee => navigation.navigate('Employee', { employee: employee }) }
-      />
+        onPress={ employee => navigation.navigate('Employee', { id: employee.id }) }/>
     )
   }
 }

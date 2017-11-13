@@ -1,6 +1,6 @@
-import getRandomAvatarPic from '~/helpers/constants/AvatarPhotoUrls';
+import getRandomAvatarPic from '~/helpers/constants/AvatarPhotoUrls'
 
-export default [
+const EmployeeData = [
   {
     'id': '9c1e4a28-454b-4058-8e04-a0daaa7fd729',
     // 'avatar_url': 'http://lorempixel.com/400/400/people',
@@ -1415,3 +1415,8 @@ export default [
     ],
   },
 ]
+export default EmployeeData
+
+export const getEmployee = (employeeId) => {
+  return EmployeeData.filter((employee) => (employeeId === employee.id))[0]
+}

@@ -28,9 +28,9 @@ export default class RootNavigator extends React.Component {
 
   _handleNotification = ({ origin, data }) => {
     /* eslint-disable no-console */
-    console.log(
-      `Push notification ${origin} with data: ${JSON.stringify(data)}`
-    )
+    // console.log(
+    //   `Push notification ${origin} with data: ${JSON.stringify(data)}`
+    // )
     /* eslint-enable no-console */
   }
 

@@ -9,7 +9,7 @@ export default function Tasks (props) {
   return (
     <View>
       <Text>
-        Tasks asdf
+        {'Tasks asdf'}
       </Text>
     </View>
   )

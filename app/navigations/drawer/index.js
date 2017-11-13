@@ -7,9 +7,8 @@ import EmployeeScreen from '~/navigations/drawer/screens/employee'
 import NavBarItem from '~/components/navBarItem'
 
 const Drawer = DrawerNavigator({
-  Employee: { screen: EmployeeScreen },
-  Directory: { screen: DirectoryScreen },
   Home: { screen: HomeScreen },
+  Directory: { screen: DirectoryScreen },
 },
 {
   navigationOptions: ({ navigation }) => {

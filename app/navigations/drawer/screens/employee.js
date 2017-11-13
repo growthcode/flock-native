@@ -1,18 +1,22 @@
-import ProfileContainer from '~/containers/profile'
-import BenefitsContainer from '~/containers/benefits'
-import TasksContainer from '~/containers/tasks'
-import React from 'react'
+import React, { PropTypes, Component } from 'react'
+import { View, Text } from 'react-native'
 import { TabNavigator } from 'react-navigation'
 
-const EmployeeScreen = TabNavigator({
+import ProfileTabContainer from '~/containers/employee/profileTabContainer'
+import BenefitsTabContainer from '~/containers/employee/benefitsTabContainer'
+import TasksTabContainer from '~/containers/employee/tasksTabContainer'
+
+import { getEmployee } from '~/helpers/constants/EmployeesData'
+
+const EmployeeTabs = TabNavigator({
   Profile: {
-    screen: ProfileContainer,
+    screen: ProfileTabContainer,
   },
   Benefits: {
-    screen: BenefitsContainer,
+    screen: BenefitsTabContainer,
   },
   Tasks: {
-    screen: TasksContainer,
+    screen: TasksTabContainer,
   },
 }, {
   tabBarPosition: 'top',
@@ -20,6 +24,21 @@ const EmployeeScreen = TabNavigator({
   tabBarOptions: {
     activeTintColor: '#e91e63',
   },
-});
+})
 
-export default EmployeeScreen
+export default class EmployeeScreen extends Component {
+  static propTypes = {}
+
+  componentWillMount () {
+    const employeeId = this.props.navigation.state.params.id
+    this.setState({ employee: this.getEmployee(employeeId) })
+  }
+
+  render () {
+    return (
+      <EmployeeTabs screenProps={ { employee: this.state.employee } } />
+    )
+  }
+}
+
+EmployeeScreen.prototype.getEmployee = getEmployee

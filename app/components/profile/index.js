@@ -11,16 +11,15 @@ export default function Profile (props) {
     <View>
       <View>
         <Image
-          source={{uri: employee.avatar_url}}
-          style={{
+          source={ { uri: employee.avatar_url } }
+          style={ {
             alignSelf: 'center',
             height: 200,
             width: 200,
             borderWidth: 1,
             borderRadius: 100,
             margin: 10,
-          }}
-        />
+          } }/>
       </View>
       <View>
         <Text>{`${employee.first_name} ${employee.last_name}`}</Text>
